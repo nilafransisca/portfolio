@@ -33,23 +33,23 @@ section {
 
 .education {
   position: relative;
-  padding-left: 30px; /* Space for vertical line */
+  padding-left: 30px;
 }
 
 .education-item {
   position: relative;
   margin-bottom: 20px;
-  padding-left: 30px; /* Align text with the vertical line */
+  padding-left: 30px;
 }
 
 .education-item h3 {
   margin: 0;
-  font-size: 1em; /* Smaller font size for headings */
+  font-size: 1em;
 }
 
 .education-item p {
   margin: 0;
-  font-size: 0.875em; /* Smaller font size for paragraphs */
+  font-size: 0.875em;
 }
 
 .education-item::before {
@@ -58,19 +58,19 @@ section {
   left: 0;
   top: 0;
   height: 100%;
-  width: 2px; /* Width of the vertical line */
-  background-color: #ddd; /* Color of the vertical line */
+  width: 2px;
+  background-color: #ddd;
 }
 
 .education-item::after {
   content: "";
   position: absolute;
-  left: -6px; /* Adjust based on the width of the vertical line */
-  top: 10px; /* Adjust based on the position of the text */
-  width: 7px; /* Diameter of the dot */
-  height: 7px; /* Diameter of the dot */
+  left: -6px;
+  top: 10px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background-color: #333; /* Color of the dot */
+  background-color: #333;
 }
 
 .custom-btn {
@@ -86,34 +86,42 @@ section {
   border: 1px solid black;
 }
 
-.btn-secondary {
+.btn-ttp {
   font-size: 0.8rem;
   background-color: rgb(237, 153, 167);
   color: black;
   border: 1px solid black;
   padding: 0.4rem 0.8rem;
+  border-radius: 8px;
 }
 
-.btn-secondary:hover {
+.btn-ttp:hover {
   background-color: pink;
   border: 1px solid black;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 .bg-custom {
   background-color: #fff0f3;
 }
 
-.btn-primary {
+.btn-kirim {
   font-size: 0.8rem;
   background-color: rgb(237, 153, 167);
   color: black;
   border: 1px solid black;
   padding: 0.4rem 0.8rem;
+  border-radius: 8px;
 }
 
-.btn-primary:hover {
+.btn-kirim:hover {
   background-color: pink;
   border: 1px solid black;
+  border-radius: 8px;
 }
 
 .footer-bg-pink {
