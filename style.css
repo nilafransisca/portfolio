@@ -1,0 +1,125 @@
+section {
+  padding-top: 5rem;
+}
+
+.jumbotron {
+  background-color: #fff0f3;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+
+.intro-text {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.text-justify {
+  text-align: justify;
+}
+.smaller-text {
+  font-size: 0.875rem;
+  max-width: 700px;
+}
+
+.skills {
+  background-color: #fff0f3;
+}
+
+.bg-pink {
+  background-color: #fff0f3;
+}
+
+.education {
+  position: relative;
+  padding-left: 30px; /* Space for vertical line */
+}
+
+.education-item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 30px; /* Align text with the vertical line */
+}
+
+.education-item h3 {
+  margin: 0;
+  font-size: 1em; /* Smaller font size for headings */
+}
+
+.education-item p {
+  margin: 0;
+  font-size: 0.875em; /* Smaller font size for paragraphs */
+}
+
+.education-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px; /* Width of the vertical line */
+  background-color: #ddd; /* Color of the vertical line */
+}
+
+.education-item::after {
+  content: "";
+  position: absolute;
+  left: -6px; /* Adjust based on the width of the vertical line */
+  top: 10px; /* Adjust based on the position of the text */
+  width: 7px; /* Diameter of the dot */
+  height: 7px; /* Diameter of the dot */
+  border-radius: 50%;
+  background-color: #333; /* Color of the dot */
+}
+
+.custom-btn {
+  font-size: 0.8rem;
+  background-color: rgb(237, 153, 167);
+  color: black;
+  border: 1px solid black;
+  padding: 0.4rem 0.8rem;
+}
+
+.custom-btn:hover {
+  background-color: pink;
+  border: 1px solid black;
+}
+
+.btn-secondary {
+  font-size: 0.8rem;
+  background-color: rgb(237, 153, 167);
+  color: black;
+  border: 1px solid black;
+  padding: 0.4rem 0.8rem;
+}
+
+.btn-secondary:hover {
+  background-color: pink;
+  border: 1px solid black;
+}
+
+.bg-custom {
+  background-color: #fff0f3;
+}
+
+.btn-primary {
+  font-size: 0.8rem;
+  background-color: rgb(237, 153, 167);
+  color: black;
+  border: 1px solid black;
+  padding: 0.4rem 0.8rem;
+}
+
+.btn-primary:hover {
+  background-color: pink;
+  border: 1px solid black;
+}
+
+.footer-bg-pink {
+  background-color: pink;
+}
+
+.footer-bg-pink .fab {
+  margin-right: 10px;
+}
