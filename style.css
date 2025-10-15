@@ -108,26 +108,3 @@ section {
 .bg-custom {
   background-color: #fff0f3;
 }
-
-.btn-kirim {
-  font-size: 0.8rem;
-  background-color: rgb(237, 153, 167);
-  color: black;
-  border: 1px solid black;
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-}
-
-.btn-kirim:hover {
-  background-color: pink;
-  border: 1px solid black;
-  border-radius: 8px;
-}
-
-.footer-bg-pink {
-  background-color: pink;
-}
-
-.footer-bg-pink .fab {
-  margin-right: 10px;
-}
