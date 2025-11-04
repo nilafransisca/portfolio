@@ -1,5 +1,143 @@
+/* ===== NAVBAR STYLING - PERBAIKAN ===== */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  color: #333 !important;
+  font-size: 1.5rem;
+}
+
+/* Styling untuk nav-link - DEFAULT (abu-abu muda) */
+.navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.5) !important; /* Abu-abu muda untuk semua link */
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Warna saat hover */
+.navbar-nav .nav-link:hover {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Warna HANYA untuk link yang active - hitam pekat */
+.navbar-nav .nav-link.active {
+  color: #000 !important; /* Hitam pekat hanya untuk yang diklik */
+  font-weight: 600;
+}
+
+/* ===== CSS ORIGINAL ANDA ===== */
 section {
   padding-top: 5rem;
+}
+
+/* ===== STYLING BARU UNTUK ABOUT SECTION ===== */
+
+#about {
+  background: linear-gradient(135deg, #ffffff 0%, #fff5f7 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dekorasi background */
+#about::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(237, 153, 167, 0.1), transparent);
+  border-radius: 50%;
+}
+
+#about::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 192, 203, 0.1), transparent);
+  border-radius: 50%;
+}
+
+/* Heading About Me - WARNA GELAP KAYAK SKILLS */
+#about h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 2rem; /* Lebih kecil dari nama */
+  color: #333; /* Warna gelap kayak skills & education */
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+#about h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px; /* Lebih kecil */
+  height: 3px; /* Lebih tipis */
+  background: linear-gradient(90deg, #ed99a7, #ffc0cb); /* Accent pink */
+  border-radius: 2px;
+}
+
+/* Foto About - tidak bulat */
+#about img {
+  border-radius: 20px !important;
+  border: 6px solid white;
+  box-shadow: 0 15px 45px rgba(237, 153, 167, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+  max-width: 200px;
+}
+
+#about img:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 20px 60px rgba(237, 153, 167, 0.5);
+}
+
+/* Card wrapper untuk teks about */
+#about p {
+  background: white;
+  padding: 2rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  line-height: 1.8;
+  color: #555;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+  border-left: 5px solid #ed99a7;
+  transition: all 0.3s ease;
+}
+
+#about p:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(237, 153, 167, 0.2);
+}
+
+/* Icon dekorasi untuk about text */
+#about p::before {
+  content: '💼';
+  position: absolute;
+  top: -15px;
+  left: 30px;
+  font-size: 2rem;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Container about */
+#about .container {
+  position: relative;
+  z-index: 1;
 }
 
 .jumbotron {
@@ -7,6 +145,115 @@ section {
   padding-top: 60px;
   padding-bottom: 60px;
   overflow: hidden;
+  position: relative;
+}
+
+/* ===== STYLING BARU UNTUK JUMBOTRON/HOME ===== */
+
+/* Background pattern/decoration */
+.jumbotron::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, rgba(255, 192, 203, 0.3), rgba(237, 153, 167, 0.3));
+  border-radius: 50%;
+  z-index: 0;
+  animation: float 6s ease-in-out infinite;
+}
+
+.jumbotron::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, rgba(237, 153, 167, 0.2), rgba(255, 192, 203, 0.2));
+  border-radius: 50%;
+  z-index: 0;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* Foto styling - tidak bulat, dengan efek modern */
+.jumbotron .col-md-4 img {
+  border-radius: 20px !important; /* Rounded corner, bukan bulat penuh */
+  box-shadow: 0 10px 40px rgba(237, 153, 167, 0.4);
+  border: 5px solid white;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+  max-width: 280px;
+}
+
+.jumbotron .col-md-4 img:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 15px 50px rgba(237, 153, 167, 0.6);
+}
+
+/* Wrapper untuk foto dengan dekorasi */
+.jumbotron .col-md-4 {
+  position: relative;
+  z-index: 1;
+}
+
+/* Nama styling - HERO/FOCAL POINT */
+.jumbotron h1 {
+  font-size: 3rem; /* Lebih besar dari about */
+  background: linear-gradient(135deg, #ed99a7, #ff69b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInUp 1s ease;
+  position: relative;
+  z-index: 1;
+  font-weight: 800; /* Lebih bold */
+  letter-spacing: -1px;
+}
+
+/* Subtitle styling */
+.jumbotron .lead {
+  font-size: 1.2rem;
+  color: #666 !important;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1.2s ease;
+}
+
+/* Tambahan dekorasi kecil */
+.jumbotron .lead::before {
+  content: '✨';
+  margin-right: 8px;
+}
+
+.jumbotron .lead::after {
+  content: '✨';
+  margin-left: 8px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card untuk teks di jumbotron - opsional */
+.jumbotron .col-md-8 {
+  position: relative;
+  z-index: 1;
 }
 
 .intro-text {
@@ -18,6 +265,7 @@ section {
 .text-justify {
   text-align: justify;
 }
+
 .smaller-text {
   font-size: 0.875rem;
   max-width: 700px;
@@ -29,6 +277,107 @@ section {
 
 .bg-pink {
   background-color: #fff0f3;
+}
+
+/* ===== STYLING BARU UNTUK SKILLS & EDUCATION ===== */
+
+/* Card untuk setiap kolom skills */
+#skills .col-md-4 {
+  margin-bottom: 20px;
+}
+
+#skills h5 {
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* Garis bawah pada heading */
+#skills h5::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #ed99a7, #ffc0cb);
+  border-radius: 2px;
+}
+
+/* Card wrapper untuk education, soft skills, technical skills */
+#skills .col-md-4 > div {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+#skills .col-md-4 > div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(237, 153, 167, 0.3);
+}
+
+/* Styling untuk list items */
+#skills ul {
+  text-align: left;
+}
+
+#skills ul li {
+  padding: 0.6rem 0;
+  color: #555;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 25px;
+  transition: color 0.3s ease;
+}
+
+#skills ul li:hover {
+  color: #ed99a7;
+}
+
+/* Icon untuk soft skills dan technical skills */
+#skills .col-md-4:nth-child(2) ul li::before,
+#skills .col-md-4:nth-child(3) ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #ed99a7;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Styling khusus untuk education items */
+#skills .col-md-4:first-child ul li {
+  background: #fff0f3;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid #ed99a7;
+  transition: all 0.3s ease;
+}
+
+#skills .col-md-4:first-child ul li:hover {
+  background: #ffe4e9;
+  transform: translateX(5px);
+}
+
+#skills .col-md-4:first-child ul li strong {
+  color: #ed99a7;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+#skills .col-md-4:first-child ul li br + text,
+#skills .col-md-4:first-child ul li strong + br + text {
+  color: #666;
+  font-size: 0.85rem;
 }
 
 .education {
@@ -107,4 +456,200 @@ section {
 
 .bg-custom {
   background-color: #fff0f3;
+}
+
+/* ===== TAMBAHAN STYLING ===== */
+/* Card hover effect */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(237, 153, 167, 0.3) !important;
+}
+
+/* ===== STYLING UNTUK PROJECT SECTION ===== */
+
+#project {
+  background: linear-gradient(180deg, #ffffff 0%, #fff5f7 100%);
+  position: relative;
+}
+
+/* Heading Project */
+#project h2 {
+  position: relative;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+#project h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #ed99a7, #ffc0cb);
+  border-radius: 2px;
+}
+
+/* Card styling untuk project */
+#project .card {
+  height: 100%;
+  position: relative;
+  background: white;
+  transition: all 0.4s ease;
+}
+
+#project .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ed99a7, #ffc0cb);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+#project .card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Card image */
+#project .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+#project .card:hover .card-img-top {
+  transform: scale(1.08);
+}
+
+/* Card body */
+#project .card-body {
+  padding: 1.5rem;
+  background: white;
+}
+
+#project .card-text {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  min-height: 60px;
+  font-weight: 500;
+}
+
+/* Button Read More */
+#project .btn-outline-dark {
+  border: 2px solid #333;
+  color: #333;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+#project .btn-outline-dark:hover {
+  background: linear-gradient(135deg, #ed99a7, #ffc0cb);
+  border-color: #ed99a7;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(237, 153, 167, 0.4);
+}
+
+/* Modal styling */
+.modal-content {
+  border-radius: 20px;
+  border: none;
+  overflow: hidden;
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #ed99a7, #ffc0cb);
+  color: white;
+  border: none;
+  padding: 1.5rem;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.modal-body {
+  padding: 2rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.modal-body strong {
+  color: #ed99a7;
+}
+
+.modal-footer {
+  border: none;
+  padding: 1rem 2rem 1.5rem;
+}
+
+.modal-footer .btn-secondary {
+  background: #ed99a7;
+  border: none;
+  padding: 0.6rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.modal-footer .btn-secondary:hover {
+  background: #ff69b4;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(237, 153, 167, 0.4);
+}
+
+.btn-close {
+  filter: brightness(0) invert(1);
+}
+
+/* Perbaikan untuk gambar sertifikat - menjaga aspect ratio */
+#sertifikasi .card-img-top {
+  width: 100%;
+  height: 250px; /* Tinggi tetap untuk semua card */
+  object-fit: contain; /* Menjaga proporsi asli gambar tanpa memotong */
+  object-position: center;
+  background-color: #f8f9fa; /* Background abu-abu muda */
+  padding: 10px; /* Padding agar gambar tidak mentok ke tepi */
+}
+
+/* Button styling */
+.btn-outline-dark:hover {
+  background-color: #212529;
+  color: white;
+}
+
+/* Footer link styling */
+footer a {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+footer a:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1rem;
+  }
 }
