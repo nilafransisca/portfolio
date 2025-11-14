@@ -10,7 +10,7 @@
 
 /* Styling untuk nav-link - DEFAULT (abu-abu muda) */
 .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5) !important; /* Abu-abu muda untuk semua link */
+  color: rgba(0, 0, 0, 0.5) !important; 
   font-weight: 500;
   padding: 0.5rem 1rem;
   transition: color 0.3s ease;
@@ -23,7 +23,7 @@
 
 /* Warna HANYA untuk link yang active - hitam pekat */
 .navbar-nav .nav-link.active {
-  color: #000 !important; /* Hitam pekat hanya untuk yang diklik */
+  color: #000 !important; 
   font-weight: 600;
 }
 
@@ -67,8 +67,8 @@ section {
 #about h2 {
   position: relative;
   z-index: 1;
-  font-size: 2rem; /* Lebih kecil dari nama */
-  color: #333; /* Warna gelap kayak skills & education */
+  font-size: 2rem; 
+  color: #333; 
   font-weight: 700;
   margin-bottom: 2rem;
 }
@@ -105,7 +105,7 @@ section {
 #about p {
   background: white;
   padding: 2rem 2.5rem;
-  padding-top: 2.5rem; /* Tambah padding atas biar ga ketutup icon */
+  padding-top: 2.5rem; 
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   line-height: 1.8;
@@ -126,9 +126,9 @@ section {
 #about p::before {
   content: '💼';
   position: absolute;
-  top: -18px; /* Pindah lebih ke atas */
+  top: -18px; 
   left: 30px;
-  font-size: 1.5rem; /* Dikecilkan dari 2rem */
+  font-size: 1.5rem; 
   background: white;
   padding: 6px 10px;
   border-radius: 10px;
@@ -185,7 +185,7 @@ section {
 
 /* Foto styling - tidak bulat, dengan efek modern */
 .jumbotron .col-md-4 img {
-  border-radius: 20px !important; /* Rounded corner, bukan bulat penuh */
+  border-radius: 20px !important; 
   box-shadow: 0 10px 40px rgba(237, 153, 167, 0.4);
   border: 5px solid white;
   transition: all 0.4s ease;
@@ -341,7 +341,6 @@ section {
   color: #ed99a7;
 }
 
-/* Icon untuk soft skills dan technical skills */
 #skills .col-md-4:nth-child(2) ul li::before,
 #skills .col-md-4:nth-child(3) ul li::before {
   content: '✓';
@@ -622,23 +621,21 @@ section {
   filter: brightness(0) invert(1);
 }
 
-/* Perbaikan untuk gambar sertifikat - menjaga aspect ratio */
+
 #sertifikasi .card-img-top {
   width: 100%;
-  height: 250px; /* Tinggi tetap untuk semua card */
-  object-fit: contain; /* Menjaga proporsi asli gambar tanpa memotong */
+  height: 250px; 
+  object-fit: contain; 
   object-position: center;
-  background-color: #f8f9fa; /* Background abu-abu muda */
-  padding: 10px; /* Padding agar gambar tidak mentok ke tepi */
+  background-color: #f8f9fa; 
+  padding: 10px; 
 }
 
-/* Button styling */
 .btn-outline-dark:hover {
   background-color: #212529;
   color: white;
 }
 
-/* Footer link styling */
 footer a {
   transition: transform 0.3s ease;
   display: inline-block;
@@ -648,7 +645,6 @@ footer a:hover {
   transform: scale(1.1);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .navbar-nav .nav-link {
     padding: 0.75rem 1rem;
